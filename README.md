@@ -1,6 +1,7 @@
 nsb-login
 =========
 Automated login script for NSB wireless on-train networks (Norway)
+
 Automatisk innloggingsskript for NSBs trådløse tognettverk
 
 Usage
@@ -18,11 +19,15 @@ If you're logged in, both these actions will succeed as expected; if not,
 the network will respectively block pings and redirect you to the captive
 portal frontpage.
 
+The script also prints and logs timing data, as well as the name of the 
+location where you're logging in (usually something like 75-10, which I think
+is an internal train ID).
+
 Known bugs and limitations
 --------------------------
 
 * There's no error checking.
 * The controller host is hard-coded, but the IP may change in the future
-* Simply reporting the JSON status chunk is not terribly user friendly, and the script doesn't try again when it fails.
+* Simply reporting the JSON status chunk is not terribly user friendly, and the script doesn't try again if it fails to log in.
 
 Still, it's sufficiently usable for my purposes.
